@@ -45,7 +45,13 @@ document
         compress: true,
       });
       pdf.addImage(canvas.toDataURL("image/jpeg", 0.95), "JPEG", 0, 0, 210, 297);
-      pdf.save("newspaper-" + new Date().toISOString().slice(0, 10) + ".pdf");
+      // Local date + time so every download gets a unique name (no ":" - not allowed in file names)
+      const now = new Date();
+      const pad = (n) => String(n).padStart(2, "0");
+      const stamp =
+        `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}` +
+        `_${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
+      pdf.save(`newspaper-${stamp}.pdf`);
     } catch (err) {
       alert("PDF could not be created. Please try again.");
     } finally {
