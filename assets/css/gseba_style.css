@@ -1,0 +1,127 @@
+/* latin */
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/UnifrakturMaguntia.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* A4 size page setup */
+@media print {
+  @page {
+    size: A4;
+    margin: 0.05in;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  padding: 0.3cm;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
+.title-text {
+  font-size: 62px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  font-family: 'UnifrakturMaguntia';
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #000000;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.left-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section .left_image1 {
+  border: 1px solid black;
+  text-align: left;
+}
+
+.right-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+}
+
+.image-container {
+  width: 100%;
+  text-align: left;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  /* ব্যাকগ্রাউন্ড কালার দেখানোর জন্য এটি যোগ করুন */
+  * {
+    -webkit-print-color-adjust: exact !important; /* Chrome, Safari, Edge, Opera */
+    print-color-adjust: exact !important; /* Firefox */
+    color-adjust: exact !important; /* Older versions */
+  }
+
+  /* নির্দিষ্ট করে এই ডিভটির জন্য */
+  div[style*="background:black"] {
+    background-color: #323030 !important;
+    color: white !important;
+  }
+}
+
+/* print_area_border = true (assets/js/config.js): red dotted guide around the A4 area, screen only */
+.container.print-area-border {
+  outline: 2px dotted red;
+  outline-offset: -2px;
+}
+
+@media print {
+  .container.print-area-border {
+    outline: none;
+  }
+}

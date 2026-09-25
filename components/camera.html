@@ -1,0 +1,80 @@
+<!-- CAMERA START -->
+<div class="image-container">
+  <input
+    type="file"
+    id="imageInput"
+    accept="image/*"
+    style="display: none"
+  />
+  <div id="cameraContainer" class="no-print" style="display: none">
+    <video id="cameraStream" autoplay playsinline></video>
+    <div class="focus-ring"></div>
+
+    <div class="top-tools">
+      <button class="tool-btn" id="torchBtn">🔦 Flash</button>
+      <button class="tool-btn" onclick="location.reload()">
+        ✖ Close
+      </button>
+    </div>
+
+    <div class="dslr-ui">
+      <div class="slider-box">
+        <span>ZOOM</span>
+        <input
+          type="range"
+          id="zoomSlider"
+          min="1"
+          max="5"
+          step="0.1"
+          value="1"
+        />
+      </div>
+      <div class="slider-box">
+        <span>EXP</span>
+        <input
+          type="range"
+          id="expSlider"
+          min="-2"
+          max="2"
+          step="0.1"
+          value="0"
+        />
+      </div>
+      <div class="dslr-controls">
+        <div style="width: 50px"></div>
+        <div id="captureButton"></div>
+        <div
+          style="
+            width: 50px;
+            color: white;
+            font-size: 10px;
+            text-align: right;
+          "
+        >
+          HD 4K
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cropperContainer" class="no-print" style="display: none">
+    <img id="cropperImage" src="" />
+    <div class="crop-buttons">
+      <button id="cropDone">Apply to News ✓</button>
+      <button id="cropCancel" class="cancel">Discard ✗</button>
+    </div>
+  </div>
+
+  <!-- নিউজের মূল ছবি শুরু (ক্যামেরা/আপলোড থেকে ক্রপ করা ছবি এখানে বসে) -->
+  <div id="imageContainer">
+    <img
+      src="assets/img/600x600-1.jpg"
+      id="finalImage"
+      style="width: 100%; height: 400px; object-fit: cover"
+      class="left_image1"
+      alt="News Image"
+    />
+  </div>
+  <!-- নিউজের মূল ছবি শেষ -->
+</div>
+<!-- CAMERA END -->

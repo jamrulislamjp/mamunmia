@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/cropper.min.css" />
+    <link rel="stylesheet" href="assets/css/gseba_style.css" />
+    <link rel="stylesheet" href="assets/css/camera.css" />
+    <script src="assets/js/cropper.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="assets/img/Centro.jpeg"
+          class="logo"
+          style="width: 99px; height: auto"
+          alt="Logo"
+        />
+        <div
+          class="title-text"
+          style="font-family: &quot;UnifrakturMaguntia&quot;; cursor: pointer"
+          onclick="window.print()"
+        >
+          Giorno Della vacanza
+        </div>
+        <img
+          src="assets/img/italy-national-womens-football-team-2023.png"
+          class="logo"
+          style="width: 90px; height: auto"
+          alt="Logo"
+        />
+      </div>
+
+      <div
+        class=""
+        style="
+          display: flex;
+          border: 1px solid black;
+          padding: 3px;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          box-sizing: border-box;
+          margin: 3px 0;
+          background: #638765;
+          color: white;
+        "
+      >
+        <b id="cameraButton" style="cursor: pointer"> Camera </b>
+        <b id="uploadButton" style="cursor: pointer"> Pizzo calabro </b>
+        <!--<b  style="cursor: pointer"> Il colossio </b>-->
+
+        <b id="downloadButton" style="cursor: pointer"> Device Memory </b>
+      </div>
+
+      <div class="main-title">
+        "Welcome To the Pizzo calabro."
+        <b
+          id="date"
+          style="
+            font-family: &quot;Times New Roman&quot;, serif;
+            font-weight: 900 !important;
+          "
+        >
+        </b>
+      </div>
+
+      <div class="content">
+        <div class="left-section">
+          <!-- CAMERA START (components/camera.html: ক্যামেরা, ক্রপ ও নিউজের মূল ছবি) -->
+          <div id="cameraMount"></div>
+          <!-- CAMERA END -->
+
+          <div class="text-area">
+            <div
+              style="
+                width: 100%;
+                color: #009f4d;
+                text-align: center;
+                margin-bottom: 10px;
+                font-style: italic;
+                font-size: 26px;
+              "
+            >
+              RITROVATE PERSONE FAMOSE
+            </div>
+
+            <div
+              class="two-column-flex"
+              style="display: flex; justify-content: space-between; width: 100%"
+            >
+              <div class="column-item" style="width: 48%">
+                <h3
+                  style="
+                    font-size: 26px;
+                    margin-bottom: 5px;
+                    font-family: sans-serif;
+                    text-align: center;
+                    color: #e4002b;
+                  "
+                >
+                  Cosa vedere a pizzo calabro
+                </h3>
+
+                <div style="font-size: 14px; overflow: hidden">
+                  Un po' di storia Nel cuore della Calabria, affacciata sulle
+                  acque cristalline del Mar Tirreno, si trova Pizzo Calabro, una
+                  località che unisce storia,
+
+                  <div style="margin-top: 15px">
+                    <div style="float: right; width: 100%">
+                      <img
+                        src="assets/img/maradonaiamges.jpeg"
+                        style="
+                          width: 100%;
+                          height: auto;
+                          border: 1px solid #000;
+                        "
+                        alt="Castel"
+                      />
+                      mare e tradizioni gastronomiche in un equilibrio unico.
+                      Questo borgo della Costa degli Dei è una meta molto
+                      apprezzata da chi desidera alternare relax, cultura e
+                      sapori autentici durante la propria vacanza. Visitare
+                      Pizzo Calabro significa passeggiare tra vicoli
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="column-item divider"
+                style="
+                  width: 48%;
+                  border-left: 1px solid black;
+                  padding-left: 10px;
+                "
+              >
+                <p>
+                  carichi di storia, affacciarsi su panorami marini spettacolari
+                  e scoprire luoghi che hanno segnato profondamente il passato
+                  della Calabria.La storia di Pizzo Calabro affonda le sue
+                  radici nel Medioevo e si intreccia con eventi che hanno
+                  lasciato un segno indelebile nel centro storico. Il momento
+                  più noto risale al 1815, quando Gioacchino Murat, cognato di
+                  Napoleone Bonaparte,
+                </p>
+                <p>
+                  fu catturato e giustiziato proprio qui. Questo episodio
+                  storico è ancora oggi visibile e raccontato attraverso uno dei
+                  luoghi simbolo della città,
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="right-section"
+          style="padding-left: 10px; border-left: 1px solid #000"
+        >
+          <!--<div style="height:100px; width:100%;"></div>-->
+          <b style="text-align: center; color: #9f3e3e; font-size: 22px">
+            il Castello Murat
+          </b>
+          , che domina il borgo e rappresenta una tappa fondamentale per chi
+          vuole comprendere l’identità di Pizzo. Il passato storico di Pizzo
+          Calabro non è solo un ricordo: è parte integrante della visita. Dalle
+          piazze panoramiche del centro alle chiese scavate nella roccia, ogni
+          angolo racconta una storia che si riflette ancora nella vita
+          quotidiana del paese e rende la visita più consapevole e coinvolgente.
+
+          <h2
+            style="
+              font-size: 26px;
+              border-bottom: 2px solid #000;
+              text-align: center;
+              color: #9f3e3e;
+            "
+          >
+            COSA FARE A PIZZO CALABRO
+          </h2>
+
+          <div style="font-size: 14px; overflow: hidden">
+            Affacciata sul Mar Tirreno e inserita nello scenario suggestivo
+            della Costa degli Dei, Pizzo Calabro  è una delle destinazioni più
+            affascinanti della Calabria. Questo borgo marinaro conquista i
+            visitatori grazie al suo centro storico ricco di storia,
+            <div style="margin-top: 15px">
+              <div style="float: left; width: 48%; padding-right: 2%">
+                alle spiagge dal mare limpido e a una tradizione gastronomica
+                diventata famosa in tutta Italia.
+
+                <!-- Pizzo Calabro è una meta
+                ideale sia per una -->
+              </div>
+              <div style="float: right; width: 50%">
+                <img
+                  src="assets/img/fontana_da_terivi.jpeg"
+                  style="width: 100%; height: auto; border: 1px solid #000"
+                  alt="Castel"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h2
+            style="
+              font-size: 22px;
+              border-bottom: 2px solid #000;
+              text-align: center;
+              font-family: Arial Black;
+              color: #fff !important;
+              background-color: #6f85c4;
+            "
+          >
+            LA CHIESETTA DI PIEDIGROTTA
+          </h2>
+          <div style="font-size: 14px; overflow: hidden">
+             è uno dei luoghi più suggestivi e particolari non solo di Pizzo
+            Calabro, ma di tutta la regione.
+
+            <div style="margin-top: 15px">
+              <div style="float: left; width: 100%; padding-right: 2%">
+                <!--  sint facilis numquam?  Incidunt accusamus veritatis quia, -->
+              </div>
+              <div style="float: right; width: 100%">
+                <img
+                  src="assets/img/piedigrotta.jpg"
+                  style="width: 100%; height: auto; border: 1px solid #000"
+                  alt="Castel"
+                />
+                Questa chiesa è stata scavata direttamente nella roccia tufacea
+                a ridosso
+
+                <!--integrati negli edifici moderni,  specialmente -->
+
+                <!--nella Napoli Sotterranea. -->
+
+                <!-- romano, nonché il più imponente monumento dell'antica-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          font-size: 24px;
+          border-bottom: 2px solid #000;
+          text-align: center;
+          color: white;
+          background: #638765 !important;
+          width: 100%;
+        "
+      >
+        ------PIZZO CALABRO--------------VIBO VALENTIA-------
+      </div>
+    </div>
+    <script src="assets/js/html2canvas.min.js"></script>
+    <script src="assets/js/jspdf.umd.min.js"></script>
+    <script src="assets/js/gseba_script.js"></script>
+    <script src="assets/js/camera.js"></script>
+  </body>
+</html>
