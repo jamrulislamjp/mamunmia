@@ -34,6 +34,10 @@ The 450/500 ratio is duplicated in the camera container CSS (`aspect-ratio`), `o
 
 Clicking **Device Memory** (`#downloadButton`) rasterises `.container` with html2canvas (scale 3, `.no-print` elements ignored) and saves it with jsPDF as a single **A4 portrait (210 × 297 mm)** page. The project is A4-only: never add other paper sizes or multi-page output; `.container` (21cm × 29.7cm) is the single source of truth for the page. Both libs are vendored in `assets/js/` (`html2canvas.min.js`, `jspdf.umd.min.js`, exposed as `window.jspdf`).
 
+**Share** (`#shareButton`, in the green bar) builds the same PDF via the shared `buildPdf()` and hands it to `navigator.share({ files })` (Android Chrome over HTTPS; used to send the PDF to a Bluetooth printer app). Unsupported browsers get an alert.
+
+After a successful save, the button text becomes "PDF Saved - Tap to Open" for `OPEN_PDF_SECONDS` (5 s); a click in that window opens the PDF blob in a new tab, otherwise it reverts to the original label and a click builds a new PDF. Files are named `newspaper-YYYY-MM-DD_HH-mm-ss.pdf` (local time).
+
 ### Print behaviour
 
 Clicking the masthead title calls `window.print()`. Anything that shouldn't appear on paper needs the `no-print` class. Dark/coloured blocks rely on `print-color-adjust: exact`, and there is an attribute-selector hack (`div[style*="background:black"]`) that depends on inline style formatting. The layout must stay within one A4 page.
